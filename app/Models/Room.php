@@ -17,5 +17,5 @@ class Room extends Model
 
     public function hotel() {
         return $this->belongsTo('App\Models\Hotel');
-    }//end rooms functions
+    }//end hotel function
 }
