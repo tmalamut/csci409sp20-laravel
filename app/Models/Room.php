@@ -15,7 +15,7 @@ class Room extends Model
       'image'
     ];
 
-    public function hotels() {
+    public function hotel() {
         return $this->belongsTo('App\Models\Hotel');
     }//end rooms functions
 }
