@@ -37,7 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function room() {
+    public function reservation() {
         return $this->hasMany('App\Models\Reservation');
     }//end room function
 }
