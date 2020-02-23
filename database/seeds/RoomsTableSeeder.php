@@ -52,7 +52,7 @@ class RoomsTableSeeder extends Seeder
 
         //Loop through rooms array and create a room using the room model and mass assignment
         foreach ($rooms as $room) {
-            Hotel::create(array(
+            Room::create(array(
                 'hotel_id' => $room['hotel_id'],
                 'type' => $room['type'],
                 'description' => $room['description'],
