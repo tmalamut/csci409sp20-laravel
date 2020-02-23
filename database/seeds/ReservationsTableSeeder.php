@@ -52,7 +52,7 @@ class ReservationsTableSeeder extends Seeder
 
         //Loop through reservations array and create a reservation using the reservation model and mass assignment
         foreach ($reservations as $reservation) {
-            Hotel::create(array(
+            Reservation::create(array(
                 'user_id' => $reservation['user_id'],
                 'room_id' => $reservation['room_id'],
                 'num_of_guests' => $reservation['num_of_guests'],
