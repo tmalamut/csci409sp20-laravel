@@ -28,7 +28,7 @@ Route::group(['prefix' => 'dashboard'], function() {
     //Point the following route reservations/create/{id} to the create function in the ReservationController
     Route::get('reservations/create/{id}', 'ReservationController@create');
 });
-Route::resource('reservations', 'ReservationController', ['except' => ['create', 'read', 'update', 'delete']]);
+Route::resource('reservations', 'ReservationController', ['except' => ['create']]);
 
 
 
