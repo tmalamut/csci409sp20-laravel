@@ -27,11 +27,12 @@ class HotelController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return view('hotelform')
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('hotelform');
     }
 
     /**
@@ -42,7 +43,11 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Save the hotel to the database
+        Hotel::create([‘field1’ => $request->input(‘form_field_1’), ‘field2’ => $request->input(‘form_field_2’)]);
+
+        //Redirect back to the /hotels route
+        return redirect()->route('/hotels');
     }
 
     /**
