@@ -30,6 +30,14 @@ Route::group(['prefix' => 'dashboard'], function() {
 });
 Route::resource('reservations', 'ReservationController', ['except' => ['create']]);
 
+//New routes for hotel form
+
+Route::get('/hotels/create', 'HotelController@create');
+
+Route::post('/hotels/store', 'HotelController@store');
+
+
+
 
 
 
